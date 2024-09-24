@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <title>Result</title>
+    <style>
+                body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #E8F6F3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #1A3C40;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container p {
+            color: #2D5F5D;
+            font-size: 1.2rem;
+            margin-block: 0 20px;
+            padding-block: 0 10px;
+        }
+
+        .button {
+            background-color: #2D5F5D;
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #FFC857;
+            color: #1A3C40;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: #2D5F5D;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Blinking Report</h1>
+    </header>
+    <div class="container">
+        <p>{{ message }}</p>
+        <a href="/restart" class="button">Learn More About Your Results</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Blink Detection App</p>
+    </footer>
+</body>
+</html>
+    
